@@ -38,14 +38,14 @@ var m = 30;
 
 var A = new Array(n);
 
-for (var i = 0; i < A.length; i++){
+for (var i = 0; i < A.length; i++) {
     A[i] = new Array(m);
 }
 
 for (var i = 0; i < A.length; i++) {
     for (var j = 0; j < A[i].length; j++) {
         A[i][j] = Math.floor(Math.random() * 90 + 10);
-        document.write(A[i][j]+ ' ');
+        document.write(A[i][j] + ' ');
     }
     document.write('<br />');
 }
@@ -53,9 +53,12 @@ for (var i = 0; i < A.length; i++) {
 var sum = 0;
 
 for (var i = 0; i < A.length; i++) {
-    for (var j = 0; j < A[i].length; j++) {
-        if (i%2 === 0) {
+    if (i % 2 === 0) {
+        for (var j = 0; j < A[i].length; j++) {
             sum += A[i][j];
+            // if (i%2 === 0) {
+            //     sum += A[i][j];
+            // }
         }
     }
 }
