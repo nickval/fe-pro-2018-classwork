@@ -1,23 +1,26 @@
 function doMath(x, znak, y) {
-    var res = 0;
+    
     if (!x || !znak || !y) {
         return;
     }
     if (znak == '+') {
-        res = x + y;
-    } else if (znak == '-') {
-        res = x - y;
-    } else if (znak == '*') {
-        res = x * y;
-    } else if (znak == '/') {
-        res = x / y;
-    } else if (znak == '%') {
-        res = x % y;
-    } else if (znak == '^') {
-        res = x ^ y;
+        return x + y;
     }
-
-    return res;
+    if (znak == '-') {
+        return x - y;
+    }
+    if (znak == '*') {
+        return x * y;
+    }
+    if (znak == '/') {
+        return x / y;
+    }
+    if (znak == '%') {
+        return x % y;
+    }
+    if (znak == '^') {
+        return x ^ y;
+    }
 }
 
 var x = +prompt('x');
