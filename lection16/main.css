@@ -1,0 +1,36 @@
+.menu {
+    position: fixed;
+    text-align: left;
+    top: 0px;
+    left: 0px;
+    width: 100px;
+    height: 60px;
+    transform: .1s;
+    border-style: solid;
+    border-width: medium;
+    display: none;
+}
+
+.menu-item {
+    position: relative;
+    text-align: left;
+    border-style: solid;
+    border-width: thin;
+}
+div:hover ~ .menu-item {
+    background-color:blue;
+}
+
+.show {
+    display: block;
+}
+
+.block {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    transform: .1s;
+}
