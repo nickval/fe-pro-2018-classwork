@@ -1,12 +1,23 @@
+var h = 200,
+    step = 50,
+    movingFlag = false,
+    seatingFlag = false;
 
 window.onload = function () {
-    var menu = document.querySelector(".menu");
+    var menu = document.querySelector(".menu"),
+        block = document.querySelector(".block"),
+        getStyle = window.getComputedStyle(block),
+        topPosition = +getStyle.getPropertyValue('top').split("px")[0],
+        leftPosition = +getStyle.getPropertyValue('left').split("px")[0],
+        widthBlock = +getStyle.getPropertyValue('width').split("px")[0],
+        heightBlock = +getStyle.getPropertyValue('height').split("px")[0],
+        animationSpeed = +getStyle.getPropertyValue('transition-duration').split("s")[0] * 1000;
     // var container = document.getElementsByClassName("menu");
     var contextmenu = {
         actions: [
             {
-                title: 'Action 1',
-                handler: 'Copy'
+                title: 'Jump',
+                handler: 'Jump'
             },
             {
                 title: 'Action 2',
@@ -18,19 +29,19 @@ window.onload = function () {
             },
         ]
     }
-    
+
     for (let i = 0; i < contextmenu.actions.length; i++) {
         console.log(i);
         var div = document.createElement("div");
-    
+
         div.classList.add("menu-item");
         div.innerHTML = contextmenu.actions[i].title;
         div.addEventListener("mousedown", window[contextmenu.actions[i].handler]);
         menu.appendChild(div);
     }
-    
 
-    document.addEventListener("contextmenu", function (event) {
+
+    block.addEventListener("contextmenu", function (event) {
         event.preventDefault();
         // console.log("prevent");
         menu.style.left = event.pageX + "px";
@@ -53,4 +64,15 @@ function Edit(event) {
 function Delete(event) {
     event.stopPropagation();
     console.log('Delete');
+}
+
+function Jump() {
+    topPosition -= h;
+    block.style.top = topPosition + "px";
+    setTimeout(function () {
+        // console.log("back " + block);
+        topPosition += h;
+        block.style.top = topPosition + "px";
+        isMoveChange();
+    }, animationSpeed);
 }

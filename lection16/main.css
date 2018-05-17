@@ -5,7 +5,7 @@
     left: 0px;
     width: 100px;
     height: 60px;
-    transform: .1s;
+    transition: .1s;
     border-style: solid;
     border-width: medium;
     display: none;
@@ -32,5 +32,5 @@ div:hover ~ .menu-item {
     width: 100px;
     height: 100px;
     background-color: green;
-    transform: .1s;
+    transition: .1s;
 }
