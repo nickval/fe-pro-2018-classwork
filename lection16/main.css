@@ -1,3 +1,14 @@
+.block {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    transition: .1s;
+    z-index: -1;
+}
+
 .menu {
     position: fixed;
     text-align: left;
@@ -9,6 +20,7 @@
     border-style: solid;
     border-width: medium;
     display: none;
+    background-color: azure;
 }
 
 .menu-item {
@@ -16,6 +28,8 @@
     text-align: left;
     border-style: solid;
     border-width: thin;
+    background-color: azure;
+
 }
 div:hover ~ .menu-item {
     background-color:blue;
@@ -25,12 +39,3 @@ div:hover ~ .menu-item {
     display: block;
 }
 
-.block {
-    position: fixed;
-    top: 100px;
-    left: 100px;
-    width: 100px;
-    height: 100px;
-    background-color: green;
-    transition: .1s;
-}
