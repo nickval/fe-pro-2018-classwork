@@ -1,0 +1,16 @@
+{
+    "menu": [
+        {
+            "title": "Home"
+        },
+        {
+            "title": "Settings"
+        },
+        {
+            "title": "Accounts"
+        },
+        {
+            "title": "Members"
+        }
+    ]
+}
