@@ -1,0 +1,34 @@
+[
+    {
+        "title": "mouse",
+        "price": "10"
+    },
+    {
+        "title": "keyboard",
+        "price": "15"
+    },
+    {
+        "title": "monitor",
+        "price": "19"
+    },
+    {
+        "title": "power suply",
+        "price": "200"
+    },
+    {
+        "title": "monitor",
+        "price": "400"
+    },
+    {
+        "title": "case",
+        "price": "105"
+    },
+    {
+        "title": "motherboard",
+        "price": "300"
+    },
+    {
+        "title": "hdd",
+        "price": "325"
+    }
+]

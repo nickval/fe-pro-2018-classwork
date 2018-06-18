@@ -47,20 +47,20 @@ function getMenu(role) {
 }
 
 window.onload = function () {
-    var menu = document.getElementsByClassName('menu');
-    console.log(menu);
+    var menuMain = document.getElementsByClassName('menu');
+    console.log(menuMain);
     getMenu('user')
         .then(function (response) {
             // menuArray = response.menu;
             console.log(response.menu);
-            // for (let i = 0; i < response.menu.length; i++) {
-            //     console.log(i);
-            //     var div = document.createElement("div");
+            for (let i = 0; i < response.menu.length; i++) {
+                console.log(i);
+                var div = document.createElement("div");
         
-            //     // div.classList.add("menu-item");
-            //     div.innerHTML = response[i].menu;
-            //     menu.appendChild(div);
-            // }
+                // div.classList.add("menu-item");
+                div.innerHTML = response.menu[i];
+                menuMain.appendChild(div);
+            }
         });
     
 }
